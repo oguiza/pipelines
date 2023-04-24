@@ -1,0 +1,25 @@
+meta:
+  extract_upstream: False
+
+tasks:
+  - source: "{{ tasks_dir }}/01_download_data.py"
+    name: download_data
+    product:
+      output_path: "{{ data_dir }}/output_path"
+      nb: "{{ nbs_dir }}/01_download_data.ipynb"
+    papermill_params:
+      log_output: True
+    params:
+      config_path: "{{ pipeline_dir }}/env.yaml"
+
+  - source: "{{ tasks_dir }}/02_train_model.py"
+    name: train_model
+    upstream: [download_data]
+    product:
+      data: "{{ models_dir }}/{{ run_type }}/full"
+      nb: "{{ nbs_dir }}/02_train_model.ipynb"
+    papermill_params:
+      log_output: True
+    params:
+      config_path: "{{ pipeline_dir }}/env.yaml"
+      
