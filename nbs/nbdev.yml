@@ -1,9 +1,0 @@
-project:
-  output-dir: _docs
-
-website:
-  title: "pipelines"
-  site-url: "https://oguiza.github.io/pipelines"
-  description: "Test pipelines using nbdev, ploomber and tsai."
-  repo-branch: main
-  repo-url: "https://github.com/oguiza/pipelines"

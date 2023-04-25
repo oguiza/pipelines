@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "lib"
+  site-url: "https://oguiza.github.io/pipelines"
+  description: "Test ploomber pipelines"
+  repo-branch: main
+  repo-url: "https://github.com/oguiza/pipelines"

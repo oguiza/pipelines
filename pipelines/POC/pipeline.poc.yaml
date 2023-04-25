@@ -1,0 +1,16 @@
+tasks:
+  - source: "{{ tasks_dir }}/01_{{ env_type }}.py"
+    product:
+      nb: "{{ nbs_dir }}/01_{{ env_type }}.ipynb"
+    papermill_params:
+      log_output: True
+    params:
+      env_type: "{{ env_type }}"
+
+  - source: "{{ tasks_dir }}/02_{{ env_type }}.py"
+    product:
+      nb: "{{ nbs_dir }}/02_{{ env_type }}.ipynb"
+    papermill_params:
+      log_output: True
+    params:
+      env_type: "{{ env_type }}"
